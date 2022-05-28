@@ -13,7 +13,7 @@ st.set_page_config(page_title=apptitle, page_icon='random', layout= 'wide', init
 
 def main():
   
-  st.title('Toy App-1 on the go..')
+  st.title('Toy App-1 on the go test test 333..')
   st.balloons() 
 
   # Let's add a sub-title
@@ -33,9 +33,7 @@ def main():
   boston = datasets.load_boston()
   df2 = pd.DataFrame(boston.data, columns=boston.feature_names)
   # st.dataframe(df2)
-  
-    
- 
+
   # let us try some plotting
   fig, ax = plt.subplots(figsize=(6, 3))
   # sns.boxplot(data=df2)
@@ -47,15 +45,5 @@ def main():
   with col1:
     sns.boxplot(data=df2)
     st.pyplot(fig)
-    
-    
-
-  st.subheader('**3. Diabetes Data**')
-  diabetes = datasets.load_diabetes()
-  df3 = pd.DataFrame(diabetes.data, columns=diabetes.feature_names)
-
-  st.dataframe(df3.style.highlight_max(axis=0))
-  st.write('source: https://docs.streamlit.io/en/stable/api.html#display-data')
-
 if __name__ == '__main__':
   main()
